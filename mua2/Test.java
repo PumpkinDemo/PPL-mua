@@ -61,7 +61,9 @@ public class Test {
         //  prepare standard output and input
         System.out.println("???");
         ArrayList<Value> alValue = new ArrayList<>();
-        Scanner sout = new Scanner(new FileInputStream("stdout"));
+        Scanner sout = new Scanner(
+                new FileInputStream("stdout")
+        );
         while (sout.hasNext()) {
             Value v = new Value();
             v.read(sout);
@@ -77,8 +79,8 @@ public class Test {
         System.setOut(cout);
         System.setErr(cout);
         //  for result output
-        // PrintWriter resultout = new PrintWriter(new OutputStreamWriter(new FileOutputStream(args[0])));
-        PrintWriter resultout = new PrintWriter(new OutputStreamWriter(new FileOutputStream("result")));
+        PrintWriter resultout = new PrintWriter(new OutputStreamWriter(new FileOutputStream(args[0])));
+        // PrintWriter resultout = new PrintWriter(new OutputStreamWriter(new FileOutputStream("123")));
         //  execution
         int mark = 0;
         try {
